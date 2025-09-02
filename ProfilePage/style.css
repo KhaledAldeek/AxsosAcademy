@@ -1,0 +1,354 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: monospace; */
+}
+
+/* NavBar  Start*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    top: 0;
+    width: 100%;
+}
+
+header .nav-inner-div {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-inner-div .left-nav {
+    width: 70%;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 12px;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 7px;
+    justify-content: space-around;
+}
+
+li {
+    font-size: large;
+    font-weight: bold;
+}
+
+.ul-a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    background-color: rgb(23 162 184);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+
+/* NavBar End */
+
+.container {
+    width: 70%;
+    margin: 20px auto;
+    height: 630px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* left inner container START */
+.container-inner-left {
+    width: 55%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-inner-left .top-content {
+    width: 100%;
+    height: 55%;
+    background-color: white;
+    position: relative;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-content .empty-div {
+    width: 100%;
+    height: 25%;
+    background-color: rgb(23 162 184);
+}
+
+.jane-doe-div {
+    background-color: white;
+    width: 95%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 5%;
+}
+
+#jane-img {
+    position: absolute;
+    top: 37px;
+    left: 30px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.jane-doe-inner-div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+#map-marker {
+    height: 35px;
+}
+
+#gear {
+    height: 20px;
+}
+
+.location {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+
+#edit-profile {}
+
+.edit-profile {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: top;
+}
+
+.container-inner-left .bottom-content {
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    border: 2px solid gray;
+
+}
+
+.bottom-content-education-full-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-content-education-top-inner-div {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(51 51 51);
+}
+
+#education-h {
+    color: white;
+    padding: 10px;
+}
+
+.bottom-content-education-bottom-inner-div {
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* padding: 0px 10px; */
+}
+
+.bottom-content-education-bottom-inner-div h3 {
+    padding: 0px 10px;
+}
+
+#date {
+    opacity: 70%;
+}
+
+/* left inner container END*/
+
+/* right inner container START*/
+
+.container-inner-right {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-top-content {
+    width: 100%;
+    height: 35%;
+    background-color: white;
+    border: 2px solid gray;
+
+}
+
+.connection-request-inner {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(51 51 51);
+}
+
+.h-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white
+}
+
+#two {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(146 146 146);
+    padding: 5px 10px;
+}
+
+.todd-and-phill-div {
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.connection-request {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.todd-e-full, .phill-k-full{
+    background-color: white;
+    width: 100%;
+    height: 40%;
+    display: flex;
+
+}
+
+#todd, #phill{
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+}
+
+.todd-e-left, .phill-k-left{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.todd-e-right, .phill-k-right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#accept-circle, #close-circle{
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    padding: 0px 5px;
+}
+
+.right-bottom-content{
+    width: 100%;
+    height: 60%;
+    background-color: blueviolet;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-right-bottom-inner-content{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(51 51 51);
+}
+
+.your-connections-div{
+    height: 100%;
+}
+
+#five-hundred-plus{
+    text-align: center;
+    width: 20%;
+    border: none;
+    background-color: rgb(146 146 146);
+    border-radius: 50%;
+}
+
+.second-right-bottom-inner-content{
+    width: 100%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.adrien-d-div, .anne-j-div, .alayne-t-div, .arry-y-div{
+    height: 20%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+#adrien, #anne, #alayne, #arry{
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+}
+
+.third-right-bottom-inner-content{
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    border: 2px solid gray;
+}
+
+.view-more-div{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}

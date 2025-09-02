@@ -1,0 +1,31 @@
+img {
+    height: 200px;
+}
+
+body{
+    background-color: lightgray;
+}
+
+header {
+    background-color: lightgray;
+    text-align: center;
+    margin: 20px;
+}
+
+.img{
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.first-div{
+    background-color: #54c0ff;
+}
+
+.second-div{
+    background-color: #d8a7ae;
+}
+.third-div{
+    background-color: white;
+}

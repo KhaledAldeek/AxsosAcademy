@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.header h1{
+    padding: 10px;
+}
+
+.your-feed h1{
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.container{
+    margin: 10px auto;
+    width: 60%;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content{
+    height: 50%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 4px solid black
+}
+
+.left-content a{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#user{
+    width: 140px;
+    height: 140px;
+}
+
+
+
+.right-content{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-subcontent{
+    height: 30%;
+    width: 100%;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.right-subcontent-top{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.likes{
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+}
+
+.like-btn{
+    background-color: rgb(255 217 102);
+    width: 50px;
+    height: 40px;
+    border: 3px solid black;
+    box-shadow: 3px 3px black;
+}
+
+.right-subcontent-bottom{
+    width: 100%;
+    height: 45%;
+}
+
+.right-subcontent-bottom p{
+    font-size: 30px;
+    width: 80%;
+    margin: auto;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Network</h1>
+    </header>
+
+    <div class="your-feed">
+        <h1>Your Feed</h1>
+    </div>
+
+    <div class="container">
+        <div class="left-content">
+            <img src="images/userIcon.png" alt="userIcon" id="user">
+            <a href="">Add an avatar</a>
+            <h1>James Doe</h1>
+        </div>
+        <div class="right-content">
+            <div class="right-subcontent">
+                <div class="right-subcontent-top">
+                    <h1>Neil M</h1>
+                    <div class="likes">
+                        <h2><span id="neil-m-likes">0</span> Like(s)</h2>
+                        <button onclick="addOne('neil-m-likes')" class="like-btn">Like</button>
+                    </div>
+                </div>
+                <div class="right-subcontent-bottom">
+                    <p>I just set up this new discord bot, let me know what you all think. <a href="">link</a></p>
+                </div>
+            </div>
+
+            <div class="right-subcontent">
+                <div class="right-subcontent-top">
+                    <h1>Nichole K</h1>
+                    <div class="likes">
+                        <h2><span id="nichole-k-likes">0</span> Like(s)</h2>
+                        <button onclick="addOne('nichole-k-likes')" class="like-btn">Like</button>
+                    </div>
+                </div>
+                <div class="right-subcontent-bottom">
+                    <p>Just finished my <a href="">next comic</a>, check it out.</p>
+                </div>
+            </div>
+            <div class="right-subcontent">
+                <div class="right-subcontent-top">
+                    <h1>Jim R</h1>
+                    <div class="likes">
+                        <h2><span id="jim-r-likes">0</span> Like(s)</h2>
+                        <button onclick="addOne('jim-r-likes')" class="like-btn">Like</button>
+                    </div>
+                </div>
+                <div class="right-subcontent-bottom">
+                    <p>I cant't stop listening to the <a href="">new album</a>. who else is liking it?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

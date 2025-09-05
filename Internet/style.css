@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 10px auto;
+    height: 1100px;
+}
+
+.header{
+
+    margin: 0 auto;
+    height: 18%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-top{
+    
+    width: 100;
+    height: 45%;
+}
+
+.header-bottom{
+    background-color: hsl(207.84deg 39.92% 47.65%);
+    height: 45%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.header-bottom h1{
+    font-size: 45px;
+    width: 90%;
+    padding: 25px;
+}
+
+#globe{
+    width: 140px;
+}
+
+#net{
+    color: rgb(34 99 154);
+}
+
+.position-header h1 {
+    font-size: 60px;
+}
+
+.position-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 1px;
+}
+
+.container{
+    background-color: aquamarine;
+    width: 85%;
+    height: 82%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, hsl(0deg 0% 91.76%), white);
+}   
+
+.left-container{
+    width:25%;
+    height: 100%;
+}
+
+.right-container{
+    width: 73%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#internet{
+    color: red;
+}
+
+.inter-net{
+    color: rgb(34 99 154);
+}
+
+.left-top-container{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.left-ps{
+    font-size: 20px;
+    font-weight: bold;
+    width: 90%;
+    padding: 0px 0px 0px 10px;
+}
+
+.btns-div{
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-style: none none solid none;
+    border-color: black;
+    border-width: 1px;
+}
+
+.btns{
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;  
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px gray;
+
+}
+
+#watch{
+    background-color: hsl(207.27deg 44.35% 48.63%);
+}
+
+#more{
+    background-color: hsl(33.56deg 84.17% 52.94%);
+}
+
+.left-bottom-container{
+    width: 95%;
+    height: 50%;
+    margin: 10px auto ;
+    background-image: url("images/ad_background.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reinvent{
+    height: 30%;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+
+#ninja-img{
+    width: 40%;
+}
+
+#learn-more-btn{
+    color: white;
+    background-color: hsl(188.26deg 68.32% 60.39%);
+    width: 80%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px gray;
+    font-size: 20px;
+}
+
+#arrow-one{
+    opacity: 50%;
+}
+
+#arrow-two{
+    opacity: 75%;
+}
+
+.right-top-container{
+    width: 99%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    border-style: none none solid none;
+    border-color: hsl(0deg 0% 48.63%);
+    border-width: 1px;
+}
+
+#home-img{
+    width: 30px;
+}
+
+.dns{
+    width: 10%;
+    color: hsl(206.67deg 54.1% 35.88%);
+    font-weight: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+#phone-img{
+    width: 60px;
+}
+
+.calling-inner-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calling{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    gap: 5px;
+    padding-bottom: 5px;
+    color: gray;
+}
+
+.calling h1 {
+    font-size: 40px;
+    color: hsl(188.86deg 89.74% 45.88%);
+}
+
+.middle-div{
+    font-size: 20px;
+    width: 95%;
+}
+
+.middle-div h1, .right-bottom-container h1{
+    color: hsl(208.26deg 63.35% 37.45%);
+    font-size: 35px;
+}
+
+.middle-div ul, .middle-div ol{
+    padding: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 10px;
+}
+
+.coloring-span{
+    color: hsl(190.5deg 58.25% 40.39%);
+
+}
+
+#client-server-img{
+    width: 300px;
+    height: 100px;
+}
+
+.right-bottom-container{
+    width: 95%;
+    height: 20%;
+    
+}
+
+#big-three-img{
+    margin: 10px; 
+    width: 200px;
+    height: 90%;
+}
+
+.right-bottom-container{
+    display: flex;
+    margin: 10px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid hsl(204.38deg 97.33% 44.12%);
+}
+
+.big-three-div{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

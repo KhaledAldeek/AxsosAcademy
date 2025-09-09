@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left-nav">
+            <img src="images/marisa.png" alt="a-cube-image">
+            <h1><span>Marisa</span> <br> Basic-Calculator</h1>
+        </div>
+
+        <div class="right-nav">
+            <button onmouseover="change3(this)" onmouseout="change4(this)" class="heart">♥</button>
+            <button onmouseover="change3(this)" onmouseout="change4(this)" class="source-code">View Source Code</button>
+            <button onmousemove="change1(this)" onmouseout="change2(this)" class="sign-up">Sign Up</button>
+            <button onmouseover="change3(this)" onmouseout="change4(this)" class="log-in">log In</button>
+        </div>
+    </header>
+
+    <div id="calculator">
+        <input type="text" id="display">
+
+        <div class="row">
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(7);">7</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(8);">8</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(9);">9</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" class="operator" onclick="setOP('/');">÷</button>
+        </div>
+        <div class="row">
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(4);">4</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(5);">5</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(6);">6</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" class="operator" onclick="setOP('*');">×</button>
+        </div>
+        <div class="row">
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(1);">1</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(2);">2</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(3);">3</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" class="operator" onclick="setOP('-');">−</button>
+        </div>
+        <div class="row">
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="clr();">C</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press(0);">0</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" onclick="press('.');">.</button>
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" class="operator" onclick="setOP('+');">+</button>
+        </div>
+        <div class="row">
+            <button onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" id="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <div>
+</body>
+
+</html>

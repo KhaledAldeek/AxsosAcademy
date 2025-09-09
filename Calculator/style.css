@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 1000px;
+}
+
+.header {
+    height: 15%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .left-nav {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.header div img {
+    margin: 20px 0px 0px 20px;
+}
+
+.header div h1 {
+    color: white;
+
+    span {
+        color: gray;
+    }
+
+}
+
+.right-nav {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.log-in, .sign-up, .source-code,.heart {
+    background-color: rgb(68 72 87);
+    color: white;
+    height: 80%;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+
+.log-in {
+    width: 22%;
+}
+
+.sign-up {
+    width: 22%;
+    color: black;
+    background-color: rgb(71 207 115);
+}
+
+
+
+.source-code {
+    width: 38%;
+}
+
+.heart {
+    width: 12%;
+}
+
+#calculator {
+    background-color: black;
+    width: 30%;
+    height: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+#display{
+    width: 90%;
+    height: 12%;
+    font-size: 30px;
+    direction: rtl;
+    padding: 0px 20px;  
+    background-color: transparent;
+    border: none;
+}
+
+.row{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+    button{
+        width: 23%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgb(102 102 102);
+        color: white;
+        font-size: 30px;
+    }
+
+#equals{
+    width: 98%;
+    border-radius: 50px;
+}
+
+
+.operator{
+    background-color: rgb(255 140 0);
+}
+
+input{
+    color: white;
+}

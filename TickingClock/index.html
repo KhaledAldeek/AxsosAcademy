@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left-nav">
+            <img src="Images/marisa.png" alt="a-cube-image">
+            <h1><span>Marisa</span> <br> Basic-Calculator</h1>
+        </div>
+
+        <div class="right-nav">
+            <button onmouseover="change3(this)" onmouseout="change4(this)" class="heart">♥</button>
+            <button onmouseover="change3(this)" onmouseout="change4(this)" class="source-code">View Source Code</button>
+            <button onmousemove="change1(this)" onmouseout="change1(this)" class="sign-up">Sign Up</button>
+            <button onmouseover="change3(this)" onmouseout="change4(this)" class="log-in">log In</button>
+        </div>
+    </header>
+
+    <div class="clock">
+        <div class="hand hour" id="hour"></div>
+        <div class="hand minute" id="minute"></div>
+        <div class="hand second" id="second"></div>
+        <div class="center"></div>
+    </div>
+</body>
+
+</html>

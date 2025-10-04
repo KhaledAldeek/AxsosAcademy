@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- For Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="w-100/100 h-screen">
+    <div class="h-80/100 w-70/100 mt-10 mr-auto ml-auto flex flex-col items-center gap-10">
+        <h1 class="mt-10 text-3xl text-center font-bold" >Welcome to the Great Number Game!</h1>
+        <p class="text-xl text-center">I am thinking a number between 1 and 100</p>
+        <p class="text-xl text-center">  Take a guess!</p>
+        <form class="w-[40%] h-[15%] flex flex-col justify-around items-center" method="post" action="/guess">
+            {% csrf_token %}
+            <input class=" w-[40%] h-[30%] border-1px outline-solid text-center" type="number" min="1" max="100" name="number">
+            <button class="border-1px border-3 shadow-black-4xl w-[30%] h-[40%] " >Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

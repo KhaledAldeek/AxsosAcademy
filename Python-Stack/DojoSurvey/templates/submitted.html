@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Submitted Form</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <body class="w-full h-screen bg-gray-100 place-content-center place-items-center ">
+            <form method="POST" action="">
+                <div class="h-120 w-150 bg-white border-3 flex flex-col justify-start items-center relative    ">
+                    <h1 class="underline mt-10 mr-70 text-2xl">Submitted Info:</h1>
+                    <div class = "w-80/100 h-10/100 flex justify-start items-center">
+                        <h3 class="text-2xl w-50/100">Name:</h3>
+                        <h3>{{ name }}</h3>
+                    </div>
+                    <div class = "w-80/100 h-10/100 flex justify-start items-center">
+                        <h3 class="text-2xl w-50/100">Dojo Location:</h3>
+                        <h3>{{ location }}</h3>
+                    </div>
+                    <div class = "w-80/100 h-10/100 flex justify-start items-center">
+                        <h3 class="text-2xl w-50/100">Favourite Language:</h3>
+                        <h3>{{ language }}</h3>
+                    </div>
+                    <div class = "w-80/100 h-10/100 flex justify-start items-center">
+                        <h3 class="text-2xl w-50/100">Comment:</h3>
+                        <h3>{{ comment }}</h3>
+                        <button class="h-10/100 w-20/100 bg-blue-300 rounded-lg absolute bottom-10 right-10">Go Back</button>
+
+                    </div>
+                </div>
+            </form>
+        </body>
+    </body>
+</html>

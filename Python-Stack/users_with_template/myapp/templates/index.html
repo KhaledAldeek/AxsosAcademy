@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- For Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="w-[100%] h-[100vh] bg-gray-200 flex flex-col">
+    <!--  -->
+    <h1 class="text-4xl w-50 mt-5 ml-auto mr-auto">All the users</h1>
+    <div class="overflow-y-scroll h-[40vh]">
+        <table
+        class="table-auto border border-3 border-black w-[80%] mt-5 ml-auto mr-auto text-center ">
+
+        <tr class="border border-3 border-black h-10">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+        {% for user in users %}
+        <tr class="border border-3 border-black h-10">
+            <td>{{ user.id }}</td>
+            <td>{{ user.first_name }} {{ user.last_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.age }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+
+    <div class="w-[90%] border border-1 border-black mt-5 ml-auto mr-auto"></div>
+
+    <h1 class="text-4xl w-50 mt-5 ml-auto mr-auto">Add a User</h1>
+    <form action="/users" method="post">
+        {% csrf_token %}
+        <div class="flex flex-col w-[70%] ml-auto mr-auto mt-5">
+            <div class="flex w-[100%] justify-around">
+                <div class=" w-[40%] flex justify-between">
+                    <label for="">First Name</label>
+                    <input type="text" class="border border-2 border-black " name="first_name">
+                </div>
+                <div class=" w-[40%] flex justify-between">
+                    <label for="">Last Name</label>
+                    <input type="text" class="border border-2 border-black " name="last_name">
+                </div>
+            </div>
+            <div class="flex w-[100%] justify-around mt-5">
+                <div class=" w-[40%] flex justify-between">
+                    <label for="">Email</label>
+                    <input type="email" class="border border-2 border-black " name="email">
+                </div>
+                <div class=" w-[40%] flex justify-between">
+                    <label for="">Age</label>
+                    <input type="number" class="border border-2 border-black " name="age">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-[7%] ml-auto mr-auto mt-5">
+            <button class="border-2 border-black text-black p-2 w-[100%] shadow-[2px_2px_black] ">Add</button>
+        </div>
+
+    </form>
+    {% if message != "" %}
+    <h1 class="text-red-500 text-2xl ml-auto mr-auto mt-5">{{message}}</h1>
+    {% endif %}
+</body>
+
+</html>

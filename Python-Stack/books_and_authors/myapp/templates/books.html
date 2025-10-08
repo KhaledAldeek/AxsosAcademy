@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="w-full h-screen">
+    <!-- Big Container -->
+    <div class="w-[100%] h-[100%] flex justify-center gap-50 items-center">
+        <!-- theform -->
+        <div class="w-[50%] h-[60%]">
+            <form action="/" method="post" class="w-[100%] h-[100%] flex flex-col items-center gap-10">
+                {% csrf_token %}
+                <h1 class="text-5xl">Add A Book</h1>
+                <div class="flex w-[70%] h-[10%] gap-[10%]">
+                    <label class="w-[30%] text-3xl" for="title">Title</label>
+                    <input type="text" name="title" id="title" placeholder=" The title of the Book"
+                        class="border border-black border-2 w-[60%]">
+                </div>
+                <div class="flex w-[70%] h-[30%] gap-[10%]">
+                    <label class="w-[30%] text-3xl" for="desc">Description</label>
+                    <textarea name="description" id="desc" class="border border-black border-2 w-[60%] "
+                        placeholder=" The description of the Book"></textarea>
+                </div>
+                <div class="flex w-[70%] h-[10%] flex justify_start">
+                    <div class="w-[40%]"></div>
+                    <button class="border border-2 border-black w-[20%] shadow-[2px_2px_black]">Add</button>
+                </div>
+            </form>
+        </div>
+        <div class="w-[25%] h-[60%] overflow-y-auto border-2">
+            <table class="w-[100%]">
+                <tr class="h-[15%]">
+                    <th class="w-[20%] border border-2 border-black">ID</th>
+                    <th class="w-[40%] border border-2 border-black">title</th>
+                    <th class="w-[40%] border border-2 border-black">Action</th>
+                </tr>
+                <!-- it will be data  -->
+                {% for book in books %}
+                <tr class="h-[70px]">
+                    <td class="w-[20%] border border-2 border-black text-center">{{book.id}}</td>
+                    <td class="w-[40%] border border-2 border-black text-center">{{book.title}}</td>
+                    <form action="/view" method="post">
+                        {% csrf_token %}
+                        <td class="w-[40%] border border-2 border-black text-blue-500 underline text-center">
+                            <button class="text-blue-500 underline">View</button>
+                        </td>
+                        <input type="hidden" name="book_view" value="{{book.id}}">
+                    </form>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

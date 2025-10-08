@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>{{first_name}} {{last_name}}</title>
+</head>
+
+<body class="w-full h-screen">
+    <h1 class="text-5xl ml-20 mt-10 font-bold">{{first_name}} {{last_name}}</h1>
+    <h1 class="text-4xl ml-25 m-3 semibold">ID : {{a_id}}</h1>
+    <label class="text-4xl ml-25 m-3 semibold">Notes :</label>
+    <p class="inline text-2xl semibold">{{notes}}</p>
+    <h1 class="text-4xl ml-25 m-3 semibold">Authors :</h1>
+    <ul class="text-4xl ml-30 list-disc list-inside m-3 semibold">
+        {% for book in books %}
+        <li>{{book.title}}</li>
+        {% endfor %}
+    </ul>
+    <form action="/author_view2" method="post" class="h-[7%]">
+        {% csrf_token %}
+        <select class="ml-25 m-3 w-[15%] h-[100%] border border-2 border-black" name="selection_book" id="selections2">
+            <option disabled selected value="">Select A Book</option>
+            {% for book in all_books %}
+            <option value="{{book.id}}">{{book.title}}</option>
+            {% endfor %}
+            <input type="hidden" name="hidden_author" value="{{a_id}}">
+        </select>
+        <button class=" inline w-[5%] h-[100%] border border-2 border-black shadow-[2px_2px_black]">Add</button>
+    </form>
+
+</body>
+
+</html>

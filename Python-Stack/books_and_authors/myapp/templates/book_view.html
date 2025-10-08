@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>{{title}}</title>
+</head>
+
+<body class="w-full h-screen">
+    <h1 class="text-5xl ml-20 mt-10 font-bold">{{title}}</h1>
+    <h1 class="text-4xl ml-25 m-3 semibold">ID : {{id}}</h1>
+    <label class="text-4xl ml-25 m-3 semibold">Description :</label>
+    <p class="inline text-2xl semibold">{{desc}}</p>
+    <h1 class="text-4xl ml-25 m-3 semibold">Authors :</h1>
+    <ul class="text-4xl ml-30 list-disc list-inside m-3 semibold">
+        {% for author in authors %}
+        <li>{{author.first_name}} {{author.last_name}}</li>
+        {% endfor %}
+    </ul>
+    <form action="/view2" method="post" class="h-[7%]">
+        {% csrf_token %}
+        <select class="ml-25 m-3 w-[15%] h-[100%] border border-2 border-black" name="selection_author" id="selections">
+            <option disabled selected value="">Select An Author</option>
+            {% for author in all_authors %}
+            <option value="{{author.id}}">{{author.first_name}} {{author.last_name}}</option>
+            {% endfor %}
+            <input type="hidden" name="hidden_book" value="{{id}}">
+        </select>
+        <button class=" inline w-[5%] h-[100%] border border-2 border-black shadow-[2px_2px_black]">Add</button>
+    </form>
+
+</body>
+
+</html>

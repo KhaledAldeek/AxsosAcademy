@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Show</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="relative h-[95vh] w-full flex justify-center">
+    <h1 class="text-2xl text-blue-500 underline absolute top-[5%] right-[20px]"><a href="/shows">Go Back</a></h1>
+    <div class="w-[50%] h-[90%] mt-5 ">
+        <form action="/shows/new" method="post" class="w-[100%] h-[100%] flex flex-col items-center justify-evenly">
+            {% csrf_token %}
+            <h1 class="text-4xl font-bold mr-[62%]">Add a New Show</h1>
+            <div class="w-[100%] flex flex-col h-[20%] justify-center">
+                <label class="text-3xl h-[50%]">Title</label>
+                <input name="title" type="text"
+                    class="border border-2 border-black rounded-[2px] w-full h-[40%] pl-2 text-lg">
+            </div>
+            <div class="w-[100%] flex h-[20%] justify-between ">
+                <div class="network flex flex-col w-[47%]">
+                    <label class="text-3xl h-[50%]">Network</label>
+                    <input name="network" type="text"
+                        class="border border-2 border-black rounded-[2px] w-full h-[40%] pl-2">
+                </div>
+                <div class="flex flex-col w-[47%]">
+                    <label class="text-3xl h-[50%]">Release-Date</label>
+                    <input name="release-date" type="date" id = "date-input"
+                        class="border border-2 border-black rounded-[2px] w-full h-[40%] pl-2 ">
+                </div>
+            </div>
+            <div class="w-[100%] flex flex-col h-[25%] justify-center items-between">
+                <label class="text-3xl h-[30%]">Description</label>
+                <textarea name="description"
+                    class="border border-2 border-black rounded-[2px] w-full h-[65%] pl-2 pt-2"></textarea>
+            </div>
+            <button
+                class="border border-3 border-black rounded-[2px] w-[20%] h-[7%] text-2xl shadow-[2px_2px_black]">Create</button>
+        </form>
+        {% if message %}
+        <p class="text-2xl text-red-500 text-center">{{message}}</p>
+        {% endif %}
+    </div>
+</body>
+<style>
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        width: 8%;
+        transform: scale(1.5);
+    }
+</style>
+<script>
+    const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+    document.getElementById('date-input').max = today;
+</script>
+</html>

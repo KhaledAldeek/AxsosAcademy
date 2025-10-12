@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Shows </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="relativ h-[95vh] w-full">
+    <h1 class="text-2xl text-blue-500 underline absolute top-[5%] right-[20px]"><a href="/">Go Home</a></h1>
+    <h1 class="text-5xl mt-10 ml-10 font-bold">
+        All Shows 
+    </h1>
+    <h1 class="text-2xl mt-5 m-10 font-bold">
+        We currently have {{shows_count}} show/s
+    </h1>
+    <table class="w-[95%] h-[60%] mt-10 ml-10 flex flex-col border border-2 border-black">
+        <thead class="w-[98.95%] h-[10%] m-0 sticky z-10">
+            <tr class="flex justify-start text-2xl m-0 h-[100%]">
+                <th class="w-[5%] border border-black border-2 text-left pl-2">ID</th>
+                <th class="w-[26.666666666666666666666%] border border-black border-2 text-left pl-2">Title</th>
+                <th class="w-[15%] border border-black border-2 text-left pl-2">Network</th>
+                <th class="w-[26.666666666666666666666%] border border-black border-2 text-left pl-2">Release-Date</th>
+                <th class="w-[26.666666666666666666666%] border border-black border-2 text-left pl-2">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="w-[100%] h-[90%] overflow-y-scroll">
+            {% for show in shows %}
+            <tr class="flex justify-start m-0 h-[20%] text-xl">
+                <td class="w-[5%] border border-black border-2 pl-2 text-left flex items-center">{{ show.id }}</td>
+                <td class="w-[26.66%] border border-black border-2 pl-2 text-left flex items-center">{{ show.title }}</td>
+                <td class="w-[15%] border border-black border-2 pl-2 text-left flex items-center">{{ show.network }}</td>
+                <td class="w-[26.66%] border border-black border-2 pl-2 text-left flex items-center ">{{ show.release_date }}</td>
+                <td class="w-[26.66%] border border-black border-2 pl-2 text-left flex items-center gap-1 underline text-blue-500">
+                    <a href="/shows/{{ show.id }}">View</a> 
+                    <span class="text-black">|</span>
+                    <a href="/shows/{{ show.id }}/edit">Edit</a>
+                    <span class="text-black">|</span>
+                    <a href="/shows/{{ show.id }}/delete">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1 class="text-2xl mt-10 ml-10 text-blue-500 underline"><a href="/shows/new">Add a new Show</a></h1>
+</body>
+
+</html>

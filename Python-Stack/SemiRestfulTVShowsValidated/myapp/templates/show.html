@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View {{show.title}}</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="relative">
+    <h1 class="text-2xl text-blue-500 underline absolute top-[0px] right-[50px]"><a href="/shows">Go Back</a></h1>
+    <h1 class="mt-10 ml-49 text-5xl">TV Show {{show.id}}</h1>
+    <p class="mt-10 ml-50 text-3xl"><span class="font-bold">Title : </span>{{show.title}}</p>
+    <p class="mt-5 ml-50 text-3xl"><span class="font-bold">Network : </span>{{show.network}}</p>
+    <p class="mt-5 ml-50 text-3xl"><span class="font-bold">Release_Date : </span>{{show.release_date}}</p>
+    <p class="mt-5 ml-50 text-3xl"><span class="font-bold">Description : </span>{{show.description}}</p>
+
+    <p class="mt-20 ml-50 text-3xl"><span class="font-bold">Last Updated : </span>{{show.updated_at}}</p>
+    <div class="mt-20">
+        <a class="mt-20 ml-50 text-3xl text-blue-500 underline" href="/shows/{{ show.id }}/edit">Edit</a>
+        <span class="text-black ml-4 text-3xl">|</span>
+        <a class="mt-20 ml-4 text-3xl text-blue-500 underline" href="/shows/{{ show.id }}/delete">Delete</a>
+    </div>
+</body>
+
+</html>

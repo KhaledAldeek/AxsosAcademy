@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wall</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="w-full relative">
+    <header
+        class="w-[100%] h-[65px] border-4 border-r border-l border-t fixed border-black flex justify-between items-center bg-white">
+        <h1 class="text-4xl ml-5">CodingDojo Wall</h1>
+        <div class="flex w-[25%] justify-between mr-5">
+            <h1 class="text-xl">Welcome {{request.session.first_name}}</h1>
+            <form action="/flush" method class="text-xl">
+                {% csrf_token %}
+                <input type="hidden" name="type" value="log_out">
+                <button class=" underline text-blue-500">log off</button>
+            </form>
+        </div>
+    </header>
+    <div class="h-[65px] 2-[100%]"></div>
+    <section class="w-[100%] h-[100vh]">
+        <h1 class="text-3xl ml-20 mt-10">Post a message</h1>
+        <form action="/wall" method="post" class="h-[160px] flex flex-col justify-between">
+            {% csrf_token %}
+            <textarea name="message"
+                class="h-[100px] w-[80%] border-3 border-black ml-25 mt-3 text-2xl items-center pl-2 pt-1 overflow-y-auto"></textarea>
+            <div class="w-[80%] h-[40px] flex justify-between ml-25">
+                <div class="w-[50%] h-[100%]"></div>
+                <button
+                    class="bg-[#2b78e4] text-white text-xl border-2 border-black w-[25%] shadow-[2px_2px_black]">Post a
+                    message</button>
+                <input type="hidden" name="type" value="message">
+            </div>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                {% if 'message_' in message.tags%}
+                <li {% if message.tags %} class="{{ message.tags }} text-red-500 text-xl mt-2" {% endif %}>
+                    {{ message }}
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </form>
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="ml-20 w-4/5 mt-5 mb-10">
+            <h1 class=" text-2xl mt-2">{{message.users.first_name}} {{message.users.last_name}} -
+                {{message.users.updated_at}}</h1>
+            <p class="ml-10 mt-2 text-xl">{{message.message}}</p>
+            {% for comment in message.comments.all %}
+            <h1 class="ml-10 text-2xl mt-2">{{comment.users.first_name}} {{comment.users.last_name}} -
+                {{comment.users.updated_at}}</h1>
+            <p class="ml-20 mt-2 text-lg">{{comment.comment}}</p>
+            {% endfor %}
+            <form action="/wall" method="post" class="h-[160px] flex flex-col justify-between">
+                <input type="hidden" name="message_id" value="{{message.id}}">
+                {% csrf_token %}
+                <textarea name="comment"
+                    class="h-[100px] border-3 border-black ml-10 mt-3 text-2xl items-center pl-2 pt-1 overflow-y-auto"></textarea>
+                <div class="h-[40px] flex justify-between ml-2">
+                    <div class="w-[50%] h-[100%]"></div>
+                    <button
+                        class="bg-[#009e0f] text-white text-xl border-2 border-black w-[20%] shadow-[2px_2px_black]">Post
+                        a
+                        comment</button>
+                    <input type="hidden" name="type" value="comment">
+                </div>
+            </form>
+        </div>
+
+        {% endfor %}
+        {% endif %}
+    </section>
+</body>
+
+</html>

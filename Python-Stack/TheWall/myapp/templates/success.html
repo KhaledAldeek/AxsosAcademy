@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="relative">
+    <form action="/flush" method="post" class="absolute right-10">
+        {% csrf_token %}
+        <input type="hidden" name="type" value="log_out">
+        <button class="underline text-4xl text-blue-500 hover:text-blue-800 ">Log Out</button>
+    </form>
+    <h1 class="text-5xl mt-10 ml-20">Success! Welcome {{request.session.full_name}}!</h1>
+    <h3 class="text-3xl text-green-500 mt-5 ml-20" >Successfully registered (or logged in)!</h3>
+</body>
+</html>

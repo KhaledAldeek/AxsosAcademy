@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlfredBot/AlfredBot.iml" filepath="$PROJECT_DIR$/AlfredBot/AlfredBot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Barista/Barista.iml" filepath="$PROJECT_DIR$/Barista/Barista.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cafe Java/Cafe Java.iml" filepath="$PROJECT_DIR$/Cafe Java/Cafe Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/First Java Program/First Java Program.iml" filepath="$PROJECT_DIR$/First Java Program/First Java Program.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java-Stack.iml" filepath="$PROJECT_DIR$/.idea/Java-Stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCafe/JavaCafe.iml" filepath="$PROJECT_DIR$/JavaCafe/JavaCafe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/List Of Exceptions/List Of Exceptions.iml" filepath="$PROJECT_DIR$/List Of Exceptions/List Of Exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Map of the Hashmatique/Map of the Hashmatique.iml" filepath="$PROJECT_DIR$/Map of the Hashmatique/Map of the Hashmatique.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NumbersGame/NumbersGame.iml" filepath="$PROJECT_DIR$/NumbersGame/NumbersGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrderAndItems/OrderAndItems.iml" filepath="$PROJECT_DIR$/OrderAndItems/OrderAndItems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Puzzle/Puzzle.iml" filepath="$PROJECT_DIR$/Puzzle/Puzzle.iml" />
+    </modules>
+  </component>
+</project>

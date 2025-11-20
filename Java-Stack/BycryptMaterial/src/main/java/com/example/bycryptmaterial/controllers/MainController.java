@@ -63,8 +63,9 @@ public class MainController {
     public String userShow(HttpSession session,
                            @ModelAttribute("loginUser") UserLogin loginUser, Model model){
 //        model.addAttribute("user",userService.getUser((Long)session.getAttribute("id")));
+        //Authentication
         if(session.getAttribute("User") == null){
-            return "redirect:/";
+            return "redirect:/";//flash data
         }
         User user = userService.getUser((Long)session.getAttribute("User"));
         model.addAttribute("currentUser", user);

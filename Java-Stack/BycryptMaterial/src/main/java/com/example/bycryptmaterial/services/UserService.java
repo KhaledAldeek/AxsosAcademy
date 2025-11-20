@@ -33,8 +33,11 @@ public class UserService {
         //3// if we have errors in our results
         //4// you can hash the password and save the user to the database..
         //2//
-        if(!user.getPassword().equals(user.getConfirmPassword())){
-            result.rejectValue("Not Match", "passwords not match!");// result.rejectValue(...), will print the error in jsp file...
+        if (userRepository.existsUserByEmail(user.getEmail().toString())) {
+            result.rejectValue("email", "email.already.registered", "This email address is already in use.");
+        }
+        if(user.getPassword().equals(user.getConfirmPassword())){
+            result.rejectValue("password", "passwords not match!", "Passwords must be same");// result.rejectValue(...), will print the error in jsp file...
         }
         //3//
         if(result.hasErrors()){
@@ -48,12 +51,16 @@ public class UserService {
 
     public User login(UserLogin loginUser, BindingResult result){
         User myUser = userRepository.findByEmail(loginUser.getLoginEmail());
-        //1// if login user is empty
+        //1// if login user is empty ......... imp
         //2// check the password
-        System.out.println(loginUser.getLoginPassword());
-        System.out.println( myUser.getPassword());
-        if(!BCrypt.checkpw(loginUser.getLoginPassword(), myUser.getPassword())){
-            result.rejectValue("loginPassword","Error", "Password is Incorrect");
+//        System.out.println(loginUser.getLoginPassword());
+//        System.out.println( myUser.getPassword());
+        if (myUser == null || !userRepository.existsUserByEmail(loginUser.getLoginEmail().toString())) {
+            result.rejectValue("loginEmail", "login.invalid", "Email does not exist.");
+        }
+
+        if(myUser == null || !BCrypt.checkpw(loginUser.getLoginPassword(), myUser.getPassword())){
+            result.rejectValue("loginPassword","Error", "Email or Password is Incorrect");
         }
 
         if(result.hasErrors()){

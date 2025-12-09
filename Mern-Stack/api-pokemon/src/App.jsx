@@ -10,7 +10,7 @@ function App() {
         if(isClicked){
             axios.get("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
                 .then((response) => {
-                    const names = response.data.results.map(p => p.name); // <-- الإصلاح
+                    const names = response.data.results.map(p => p.name);
                     setPokemons(names);
                     console.log(names);
                 })

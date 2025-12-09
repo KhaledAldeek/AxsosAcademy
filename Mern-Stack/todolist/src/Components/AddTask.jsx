@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const  AddTask = ({tasks, setTasks}) => {
+    const [task, setTask] = useState({});
 
-    const handleClick = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        let taskDesc = document.getElementById("task");
+        setTasks([...tasks, task]);
+    }
+
+    const handleChange = (e) => {
+        e.preventDefault();
         const task = {
-            "description":taskDesc.value,
+            "description": e.target.value,
             "status":false
-        };
-        setTasks([...tasks,task]);
-        taskDesc.value = "";
+        }
+        setTask(task);
     }
 
     return (
-        <div className={"flex items-center justify-center flex-col h-[30%] w-[40%] gap-5 mx-auto"}>
-            <input type={"text"} className={"border-3 border-black w-full"} id={"task"} />
-            <button type={"submit"} className={"border-3 border-black p-3"} onClick={handleClick}>Add Task</button>
-        </div>
+        // form
+        <form onSubmit={(e) => handleSubmit(e)} className={"flex items-center justify-center flex-col h-[30%] w-[40%] gap-5 mx-auto"}>
+                <input type={"text"} onChange={(e) => handleChange(e)} className={"border-3 border-black w-full"} id={"task"} />
+                <button type={"submit"} className={"border-3 border-black p-3"}>Add Task</button>
+        </form>
+
     );
 }
 

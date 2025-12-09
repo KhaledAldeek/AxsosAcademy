@@ -25,7 +25,7 @@ function ShowTasks({tasks, setTasks}) {
                 tasks.map((task, index) => (
                     <div key={index} className={"task w-full mt-4"}>
                         <p className={"flex gap-3 text-center w-full "}>
-                            {
+                            { 
                                 task.status ?
                                     <span className={"line-through w-[70%]"}>{task.description}</span>
                                     :

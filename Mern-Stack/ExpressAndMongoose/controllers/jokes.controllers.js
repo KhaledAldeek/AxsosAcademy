@@ -9,6 +9,7 @@ module.exports.findAllJokes = (req, res) => {
 };
 
 module.exports.findOneSingleJoke = (req, res) => {
+    // /.../.../:id
     Joke.findById(req.params.id)
         .then(joke => res.json(joke))
         .catch(err => res.status(400).json({ message: "Error", err }));

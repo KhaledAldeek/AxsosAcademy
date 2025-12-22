@@ -11,6 +11,7 @@ function App() {
         axios.post("http://localhost:8008/api/createproduct", {name, price, description})
             .then((res) => {
                 console.log(res)
+                e.target.reset ;
             })
             .catch((err) => {
                 console.log(err)

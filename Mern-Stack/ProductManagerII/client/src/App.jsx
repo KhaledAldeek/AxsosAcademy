@@ -6,7 +6,7 @@ import {Routes, Route, Link} from "react-router-dom";
 import CreateProduct from "./components/CreateProduct.jsx";
 import Product from "./components/Product.jsx";
 
-    
+
 function App() {
     return (
         <>
